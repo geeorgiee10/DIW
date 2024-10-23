@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 2rem;
+    height: 100vh;
+}
+
+.testimonials__card {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    top: 9em;
+    left: 35rem;
+    right: 35rem;
+    bottom: 9em;
+    overflow: hidden;
+}
+
+.testimonials__card--img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.testimonials__card--content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    background-color: lightgreen;
+    padding: 1rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.testimonials__card:hover .testimonials__card--content {
+    visibility: visible;
+    opacity: 0.5;
+}
+
+.testimonials__card--content p {
+    margin: 0;
+    word-wrap: break-word;
+}
