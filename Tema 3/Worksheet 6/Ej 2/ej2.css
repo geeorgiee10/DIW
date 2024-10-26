@@ -1,0 +1,59 @@
+#container { width: 500px; height:500px; position: relative;}
+.box {
+     width: 100px;
+     height: 100px;
+     background-color: red;
+     font-size: 20px;
+     position:absolute;
+     padding: 5px;
+     transition: width 3s, height 3s;
+     }
+   .ex01 .box {
+        left: 10px;
+        top: 10px;
+        transition: left 3s, top 3s;
+    }
+    .ex02 .box {
+        left: 10px;
+        top: 130px;
+        transition: left 5s, top 5s;
+    }
+    .ex03 .box {
+        left: 10px;
+        top: 250px;
+        transition: left 7s, top 7s;
+    }
+    .ex04 .box {
+        left: 10px;
+        top: 370px;
+        transition: left 9s, top 9s;
+    }
+
+    #container:hover .box {
+        transform: rotate(270deg);
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        color: yellow;
+        font-size: 18px;
+    }
+    
+    #container:hover .ex01 .box {
+        left: 390px;  
+        top: 130px; 
+    }
+    
+    #container:hover .ex02 .box {
+        left: 390px; 
+        top: 10px;  
+    }
+    
+    #container:hover .ex03 .box {
+        left: 390px; 
+        top: 370px;  
+    }
+    
+    #container:hover .ex04 .box {
+        left: 390px; 
+        top: 250px;  
+    }

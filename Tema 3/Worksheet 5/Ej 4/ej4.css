@@ -1,0 +1,5 @@
+.degradado {
+    width: 400px;
+    height: 200px;
+    margin: 50px;
+    background: linear-gradient(to top right, red, white 50%, blue);}

@@ -1,0 +1,11 @@
+.multiplebackgrounds {
+    width: 500px;
+    height:250px;
+    font-weight: bold;
+    display: flex;
+    justify-content: end;
+    background-image:  url(./decoration.png), url(./ribbon.png),url(./old_paper.jpg); 
+    background-position: left top, right bottom, left top;
+    background-repeat: no-repeat, no-repeat, repeat;
+}
+

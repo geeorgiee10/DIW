@@ -1,0 +1,29 @@
+.skills {
+    width: 100%;
+    padding: 20px;
+    background-color: #F1F8FE;
+  }
+  
+  .skills__design--progress {
+    height: 20px;
+    background-color: #E6FEFF;
+    border-radius: 10px;
+  }
+  
+  .skills__design--progress__1 {
+    display: block;
+    height: 100%;
+    background-color: #6b8e23; 
+    border-radius: 10px; 
+    animation: progressAnimation 10s linear infinite;
+  }
+  
+  @keyframes progressAnimation {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
