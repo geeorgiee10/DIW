@@ -1,0 +1,43 @@
+table{
+    width: 100%;
+    height: 25vh;
+    text-align: center;
+}
+
+#fila1{
+    background-color: #6A99D0;
+    color: white;
+}
+
+.fila2{
+    background-color: #D4DEED;
+    color: black;
+    
+}
+
+.fila3{
+    background-color: #EBEFF6;
+    color: black;
+}
+
+#fila1 > th:hover{
+    background-color:#374F6B ;
+    color: yellow;
+
+}
+
+.fila2 > td:hover{
+    background-color: #374F6B;
+    color: yellow;
+}
+
+.fila3 > td:hover{
+    background-color: #374F6B;
+    color: yellow;
+}
+
+tr:hover{
+    background-color:#AE9FFF;
+    color:black;
+}
+

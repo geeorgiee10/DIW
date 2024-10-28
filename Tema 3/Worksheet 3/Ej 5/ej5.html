@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ej5.css">
+</head>
+<body>
+    <h2>Formulario de registro</h2>
+    <form action="" method="POST"></form>
+    <fieldset>
+        <legend>¿QUIÉN ERES?</legend>
+        <label for="nombreForm">Nombre</label>
+        <input id="nombreForm" name="nombreForm" type="text" required>
+        
+        <label for="apellidosForm">Apellidos</label>
+        <input id="apellidosForm" name="apellidosForm" type="text" required>
+        
+        <label for="correoForm">Correo electronico</label>
+        <input id="correoForm" name="correoForm" type="text" pattern="[a-zA-Z0-9._%+-]+@(iesayala\.com|gmail\.com)$" placeholder="ejemplo@iesayala.com" required>
+        
+        <label for="fechaForm">Fecha de nacimiento</label>
+        <input id="fechaForm" name="fechaForm" type="date">
+
+    </fieldset>
+    <fieldset>
+        <legend>¿DE DÓNDE ERES?</legend>
+        <label for="ciudadForm">Ciudad</label>
+        <input id="ciudadForm" name="ciudadForm" type="text">
+        
+        <label for="codPostalForm">Codigo Postal</label>
+        <input id="codPostalForm" name="codPostalForm" type="text" pattern="\d{5}">
+        
+        <label for="paisForm">País</label>
+        <select id="paisForm" name="paisForm" type="text">
+            <option>Pais</option>
+            <option>España</option>
+            <option>Inglaterra</option>
+            <option>España</option>
+            
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>¿CÓMO QUIERES INICIAR SESIÓN?</legend>
+        <label for="nombreUSuarioForm">Nombre de usuario</label>
+        <input id="nombreUSuarioForm" name="nombreUSuarioForm" type="text" pattern=".{1,15}" required>
+        
+        <label for="contraseñaForm">Contraseña</label>
+        <input id="contraseñaForm" name="contraseñaForm" type="password" required>
+        
+        <label for="RepContraseñaForm">Vuelve a escribir la contraseña</label>
+        <input id="RepContraseñaForm" name="RepContraseñaForm" type="password" required>
+        
+    </fieldset>
+    <fieldset>
+        <legend>CONDICIONES DE REGISTRO</legend>
+        <label for="ofertas">Desea recibir ofertas de Mi Revista
+            <br>
+        <input id="ofertas1" name="ofertas" type="radio"><label for="ofertas1">Una vez al día</label>
+        <input id="ofertas2" name="ofertas" type="radio"><label for="ofertas2">Una vez a la semana</label>
+        <input id="ofertas3" name="ofertas" type="radio"><label for="ofertas3">Una vez al mes</label>
+        </label>
+        
+        <br>
+        <label for="aceptar">
+            <input id="aceptar" name="aceptar" type="checkbox" required>
+            <span id="acuerdo">Acepto el acuerdo de servicios, la declaracion de privacidad 
+            y la declaración de uso de cookies</span>
+        </label>
+    </fieldset>
+    <div class="boton">
+        <button>Crear cuenta</button>
+    </div>
+</body>
+</html>

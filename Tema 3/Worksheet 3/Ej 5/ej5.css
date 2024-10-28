@@ -1,0 +1,71 @@
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select {
+    margin-bottom: 0.5rem;
+    width: 15em;
+}
+
+h2 {
+    font-weight: bold;
+    text-align: center;
+}
+
+legend, label {
+    font-weight: bold;
+}
+
+select {
+    width: 15.5em;
+}
+
+button {
+    margin: 0.5rem;
+    font-size: large;
+    height: 3em;
+    width: 7em;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+}
+
+input:valid{
+    background-color:white;
+}
+
+input:invalid{
+    background-color: beige;
+}
+
+input:focus, select:focus {
+    color: rgb(204, 5, 5)
+}
+
+input:required {
+    border: 2px solid blue;
+}
+
+input[type="radio"] + label {
+	color: red;
+}
+
+input[type="radio"]:checked + label{
+    color: green;
+}
+
+
+input[type="checkbox"]:checked + #acuerdo {
+    color: green;
+    font-weight: bold; 
+}
+
+input[type="checkbox"]:not(:checked) + #acuerdo {
+    color: red;
+}
