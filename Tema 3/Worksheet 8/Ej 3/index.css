@@ -1,0 +1,39 @@
+#container{
+    display: flex;
+    height: 50vh;
+    flex-direction: column;
+    margin: 3em;
+}
+
+#media1{
+    display: flex;
+    background-color: beige;
+    flex-direction: row;
+}
+
+#media2{
+    display: flex;
+    background-color: beige;
+    flex-direction: row-reverse;
+    
+}
+
+hr{
+    width: 100%;
+    color: lightgray;
+}
+
+img{
+    width: 15vw;
+    height: 15vh;
+    padding: 1em;
+}
+
+.texto{
+    margin: 0.5em;
+}
+
+.titulo{
+    font-weight: bold;
+}
+

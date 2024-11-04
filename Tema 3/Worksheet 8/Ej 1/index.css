@@ -1,0 +1,17 @@
+
+
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    height: 70vh;
+    background-color: antiquewhite;
+}
+
+#circulo{
+    background-color: red;
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
