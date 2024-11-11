@@ -5,22 +5,15 @@
     margin: 3em;
 }
 
-#media1{
+.media{
     display: flex;
     background-color: beige;
     flex-direction: row;
+    margin-bottom: 2em;
 }
 
-#media2{
-    display: flex;
-    background-color: beige;
+.media:nth-child(2n){
     flex-direction: row-reverse;
-    
-}
-
-hr{
-    width: 100%;
-    color: lightgray;
 }
 
 img{

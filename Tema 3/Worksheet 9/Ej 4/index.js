@@ -5,11 +5,11 @@ window.onload = function () {
 
     hamburguer.addEventListener("click", () => {
         hamburguer.style.display = "none";
-        contenedor.style.left = "0"; // Mueve el menú a la pantalla
+        contenedor.style.left = "0"; 
     });
 
     cerrar.addEventListener("click", () => {
         hamburguer.style.display = "flex";
-        contenedor.style.left = "-100%"; // Oculta el menú fuera de la pantalla
+        contenedor.style.left = "-100%";
     });
 };
