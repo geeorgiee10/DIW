@@ -1,0 +1,158 @@
+#skills {
+    background-color: #243B53;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2em 1em;
+    text-align: center;
+}
+
+.containerSkills {
+    display: flex;
+    flex-direction: row; /* Distribuye los elementos en fila */
+    width: 100%;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 5em;
+}
+
+.subtitulos {
+    color: #BCCCDC;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    font-size: 1.5em;
+}
+
+.titulos {
+    color: #FF6B6B;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 1em;
+    background-color: #394B6F;
+    border-radius:  1.25em;
+    width: 9em;
+    height: auto;
+    align-self: center;
+}
+
+.backEnd,
+.frontEnd {
+    flex-basis: 45%; /* Cada columna ocupa el 45% del contenedor */
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.skills {
+    width: 100%;
+    padding-top: 2em;
+}
+
+.skills__design--progress {
+    height: 1.5em;
+    border-radius: 0.625em;
+    background-color: #394B6F;
+    position: relative;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.skills__design--progress__1 {
+    display: block;
+    height: 100%;
+    background-color: #FF6B6B;
+    border-radius: 0.625em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.porcentaje {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #BCCCDC;
+    font-weight: bold;
+}
+/* Animaciones para las barras de progreso */
+@keyframes progressPHP {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 35%;
+    }
+}
+
+@keyframes progressJava {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes progressJavaScript {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 45%;
+    }
+}
+
+@keyframes progressHTML {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes progressCSS {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 65%;
+    }
+}
+
+/* Aplicación de las animaciones a cada habilidad */
+.php {
+    animation: progressPHP 5s ease-in-out forwards;
+}
+
+.java {
+    animation: progressJava 5s ease-in-out forwards;
+}
+
+.javascript {
+    animation: progressJavaScript 5s ease-in-out forwards;
+}
+
+.html {
+    animation: progressHTML 5s ease-in-out forwards;
+}
+
+.css {
+    animation: progressCSS 5s ease-in-out forwards;
+}
+
+
+@media (max-width: 37.5em) {
+
+    .containerSkills {
+        display: flex;
+        flex-direction: column; /* Pone los elementos en columna en pantallas pequeñas */
+    }
+
+    .titulos {
+        width: 60%;  /* Ajusta el tamaño de los títulos */
+    }
+}

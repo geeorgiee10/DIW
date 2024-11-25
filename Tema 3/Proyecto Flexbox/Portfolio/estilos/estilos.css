@@ -1,0 +1,198 @@
+@import url(hero.css); 
+@import url(aboutMe.css);
+@import url(proyectos.css);
+@import url(skills.css);
+@import url(servicios.css);
+@import url(testimonios.css);
+@import url(contacto.css);
+@import url(footer.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura un modelo de caja consistente en todos los elementos */
+}
+
+:root{
+    font-size: 88.5%; /* Ajuste base de tamaño de fuente para escalar todo el sitio */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+}
+/* Estilo principal del header */
+.header {
+    max-width: 125em;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: #102A43;
+}
+/* Barra de navegación */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+/* Logo en la navegación */
+#logo {
+    /* height: calc(9rem + 1vh); 
+    width: calc(12rem + 1vw);  */
+    height: 7rem;
+    width: 9rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#logo img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+    object-fit: cover;
+}
+/* Enlaces de la navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 400;
+    padding: 0.6em;
+    color: #F5F0E6;
+    font-size: 1.3em;
+}
+
+.nav-links a:hover {
+    background-color: #FF6B6B; /* Efecto hover con color de fondo */
+    color: black;
+    border-radius: 1.25em;
+}
+/* Menú hamburguesa */
+#hamburguesa {
+    display: none; /* Oculto por defecto en pantallas grandes */
+    background-color: #102A43;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    margin: 2em;
+    flex-direction: column;
+    gap: 0.6em;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: fixed;
+    z-index: 2;
+}
+
+/* Líneas del menú hamburguesa */
+.linea {
+    width: 50%;
+    height: 0.1em;
+    background-color: white;
+}
+/* Icono de cerrar menú */
+#x {
+    display: none; /* Oculto por defecto */
+    font-size: 1.5em;
+    color: #FFF;
+    cursor: pointer;
+    position: absolute;
+    align-self: flex-end;
+    padding-right: 1em;
+    z-index: 3;
+}
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 37.5em) {
+    .header {
+        backdrop-filter: blur(10px);
+        background-color: rgba(16, 42, 67, 0.5);
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        transition: left 1s ease; /* Animación para mostrar/ocultar el header */
+        padding-top: 2em;
+        z-index: 1;
+    }
+
+    #hamburguesa {
+        display: flex; /* Muestra el botón hamburguesa en pantallas pequeñas */
+    }
+
+    #logo {
+        height: 5em;
+        align-self: center;
+        margin-bottom: 1em;
+    }
+
+    #logo img{
+        width: 5em;
+    }
+
+    #x {
+        display: flex; /* Muestra el icono de cerrar el menú */
+    }
+
+    .navbar {
+        padding: 0;
+        flex-direction: column; /* Barra de navegación vertical */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1em;
+        width: 100%;
+        align-items: center;
+    }
+
+    .nav-links a {
+        width: 100%;
+        transition: none; /* Desactiva la transición */
+        
+    }
+
+    .nav-links li {
+        width: 100%;
+        height: 3em;
+        display: flex;
+        font-size: 1.2em;
+    }
+}
+/* Estilos responsivos para pantallas medianas */
+@media (max-width: 68.75em) {
+    .navbar{
+        flex-direction: column; /* Barra de navegación en columna */
+    }
+
+    #logo {
+        align-self: center;
+        margin-bottom: 1em;
+    }
+
+    .nav-links {
+        gap: 1em;
+        margin-top: 1em;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        font-weight: 400;
+        padding: 10px;
+        color: #F5F0E6;
+        font-size: 1em;
+    }
+}

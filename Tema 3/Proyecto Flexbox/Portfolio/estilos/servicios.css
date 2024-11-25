@@ -1,0 +1,108 @@
+#servicios{
+    background-color: #394B6F;
+    display: flex;
+    flex-direction: column; /* Alineación vertical de los elementos */
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    color: #F5F0E6;
+}
+
+#containerServicios {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; /* Alineación de los elementos en fila */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    perspective: 1000px; /* Perspectiva 3D para las tarjetas */
+    margin: 1em;
+    padding: 2rem 1rem;
+    gap: 5em; /* Espacio entre los elementos */
+    box-sizing: border-box;
+  }
+  
+.card-servicio {
+    width: 100%;
+    max-width: 20em;
+    height: 27em;
+    margin: 1em;
+    position: relative;
+    transition: transform 1s;  /* Transición suave al hacer hover */
+    transform-style: preserve-3d; /* Permite la rotación 3D */
+}
+  
+.card-servicio:hover {
+    transform: rotateY(180deg);  /* Rota la tarjeta al hacer hover */
+}
+  
+.frente, .reves {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta la parte trasera al rotar */
+    color: black;
+    border: #243B53 5px ridge;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.frente{
+    background-color: #BCCCDC; 
+    font-size: 2em;
+    gap: 1em;
+    text-align: center;
+}
+  
+.reves {
+    background-color: #BCCCDC;
+    transform: rotateY(180deg); /* Voltea la cara trasera */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    font-size: 1.2rem;
+}
+
+.icons{
+    font-size: 4rem;  /* Tamaño grande de los iconos */
+}
+
+.elementosListaServicios{
+    padding-top: 1em;
+}
+  
+
+@media (max-width: 37.5em) {
+
+    #containerServicios {
+        gap: 1.5rem; /* Menor espacio entre los elementos en pantallas pequeñas */
+    }
+      
+    .card-servicio {
+        width: 100%;
+        max-width: 15rem; /* Ajusta el tamaño de las tarjetas */
+        height: 20rem;
+        margin: 1em;
+        position: relative;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+    }
+
+    .frente{ 
+        font-size: 1em; /* Tamaño de texto reducido en pantallas pequeñas */
+        padding: 1.5rem;
+    }
+
+    .reves {
+        font-size: 0.8rem; /* Texto aún más pequeño en la parte trasera */
+    }
+
+    .icons{
+        font-size: 3rem; /* Tamaño de iconos reducido */
+    }
+
+}

@@ -1,0 +1,145 @@
+#contacto{
+    background-color: #394B6F;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    color: #F5F0E6;
+}
+
+.containerContacto{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;  /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    flex-direction: row; /* Los elementos se distribuyen en fila */
+    gap: 4em;
+    margin-top: 5.5em;
+}
+
+.formulario{
+    display: flex; 
+    flex-direction: column; 
+    gap: 2rem; /* Espacio entre los campos del formulario */
+    width: 100%; 
+    max-width: 50rem; /* Ancho máximo del formulario */
+}
+
+.MediosContacto{
+    display: flex;
+    flex-direction: row;
+    gap:1rem;
+}
+
+.MediosContacto .inputs{
+    flex-basis: 50%; /* Distribuye el espacio entre los inputs de las formas de contactar*/
+}
+
+.inputs{
+    width: 100%; 
+    height: 3rem; 
+    background-color: #BCCCDC; /* Fondo claro */
+    color: #102A43; 
+    font-size: 1.3em; 
+    border: 0; 
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 1rem; /* Relleno interno */
+}
+
+.inputs::placeholder{
+    color: #102A43;
+}
+
+#mensaje{
+    width: 100%;
+    height: 100%;
+    min-height: 10rem;
+    border-radius: 20px;
+    background-color: #BCCCDC;
+    color: #102A43;
+    font-size: 1.3em;
+    padding: 1rem;
+    border: 0;
+}
+
+#mensaje::placeholder{
+    color: #102A43;
+}
+
+#enviar{
+    width: 30%; /* Tamaño del botón */
+    height: 3rem; 
+    font-size: 1.5rem; 
+    border-radius: 20px; /* Bordes redondeados */
+    background-color: #BCCCDC; 
+    color: #102A43; 
+    align-self: flex-end; /* Alineado a la derecha */
+    border: 0; 
+    transition: transform 0.3s ease; /* Transición suave para el hover */
+}
+
+#enviar:hover{
+    color: #BCCCDC; /* Color del texto en hover */
+    background-color: #102A43; /* Fondo oscuro en hover */
+    transform: scale(1.1); /* Aumento de tamaño en hover */
+}
+
+.inputs:required, #mensaje:required {
+    border: 2px solid #e1cc0f; /* Borde amarillo para campos requeridos */
+    box-shadow: 0 0 10px #e1cc0f; /* Sombra amarilla para campos requeridos */
+}
+
+.inputs:valid, #mensaje:valid {
+    border: 2px solid #4CAF50; /* Borde verde para campos válidos */
+    box-shadow: 0 0 5px #4CAF50; /* Sombra verde para campos válidos */
+}
+
+.inputs:invalid, #mensaje:invalid {
+    color: #f31602; /* Texto rojo para campos inválidos */
+}
+
+.inputs:focus, #mensaje:focus {
+    transform: scale(1.05);
+}
+
+.inputs, #mensaje {
+    transition: all 0.3s ease;
+}
+
+.datos{
+    display: flex;
+    flex-direction: column; /* Elementos en columna */
+    align-items: start; /* Alineación a la izquierda */
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    max-width: 50rem; /* Ancho máximo de los datos */
+}
+
+.datos--item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 2rem;
+    margin-left: 5rem; /* Espacio a la izquierda */
+    gap: 1.5rem;
+}
+
+
+
+@media (max-width: 1100px) {
+    .containerContacto{
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        margin-bottom: 3rem;
+        margin-top: 2rem; /* Espacio superior reducido */
+    }
+
+    .datos--item{
+        font-size: 1.3rem; /* Fuente más pequeña en pantallas pequeñas */
+        margin-left: 2rem; /* Menos margen izquierdo */
+    }
+}
+
