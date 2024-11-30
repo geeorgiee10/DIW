@@ -1,0 +1,42 @@
+html {
+    font-size: 10px;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr repeat(10, minmax(min-content, 11rem)) 1fr;
+    grid-template-rows: 50vh repeat(7, auto);
+    gap: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0078D7;
+    color: #ffffff;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  

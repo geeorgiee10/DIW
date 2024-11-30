@@ -1,0 +1,58 @@
+.layoutlayout {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "hero main main main"
+    "sidebar hero"
+    "footer";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 3fr 2fr 1fr;
+}
+
+header {
+  grid-area: header;
+  background-color: #79D1E8;
+  text-align: center;
+}
+
+#hero {
+  grid-area: hero;
+  background-color: #D3C9E0;
+  padding-left: 2em;
+}
+
+#sidebar {
+  grid-area: side;
+  background-color: #A7C16F;
+  padding-left: 2em;
+}
+
+#main {
+  grid-area: main;
+  background-color: #EDC752;
+  text-align: center;
+}
+
+#extra {
+  grid-area: extra;
+  background-color: #898989;
+  text-align: center;
+}
+
+#relImages {
+  grid-area: relImages;
+  background-color: #5AB379;
+  text-align: center;
+}
+
+#relPost {
+  grid-area: relPost;
+  background-color: #EDCEDC;
+  text-align: right;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #F2A93B;
+  text-align: center;
+}
