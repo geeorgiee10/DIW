@@ -1,0 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* Mis variables */
+:root{
+    --transparente: #00000055;
+
+    --fuente-titulos: '"Cuprum", serif';
+}
+
+/* Estilos boostrap modificados */
+body{
+    font-family: var(--fuente-titulos);
+}
+
+.nav-link:hover, .nav-link:focus{
+    background-color: var(--transparente);
+}
+
+
+/* Mis estilos */
+.hero{
+    background-image: url(../images/fondo.jpg);
+    background-position: center;
+}
+
+.hero h1{
+    background-color: var(--transparente);
+    border-radius: 25px;
+}
