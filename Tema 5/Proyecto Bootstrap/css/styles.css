@@ -1,0 +1,304 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* Mis variables */
+:root{
+    --transparente: #00000055;
+    --color-primario: #1A1A40;
+    --color-texto: #FFFFFF;
+    --color-secundario: #4C2882;
+    --color-hover: #e07ab1;
+    --color-texto-secundario: #FFD700;
+
+    --sombra-ligera: rgba(0, 0, 0, 0.3);
+    --color-borde-brillante:  #8A2BE2;
+
+    --borde-radius: 10px;
+
+    --fuente-titulos: '"Cuprum", serif';
+}
+
+/* Estilos boostrap modificados */
+body{
+    font-family: var(--fuente-titulos);
+}
+
+.navbar-brand{
+    color: var(--color-texto-secundario);
+}
+
+.navbar-brand:hover, .navbar-brand:focus{
+    color: var(--color-hover);
+}
+
+.nav-item:nth-child(odd) .nav-link:hover, .nav-link:focus {
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: rotate(-10deg);
+}
+  
+.nav-item:nth-child(even) .nav-link:hover, .nav-link:focus {
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: rotate(10deg); 
+}
+
+.nav-link{
+    color: white;
+    border-radius: var(--borde-radius);
+}
+
+.navbar-toggler{
+    background-color: var(--color-texto-secundario);
+    border: none;
+}
+
+.btn-danger{
+    background-color: var(--color-borde-brillante);
+    color: var(--color-texto);
+    border: 1px solid var(--color-secundario);
+    transition: all 1s;
+}
+
+.btn-danger:hover{
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde-brillante);
+    transform: scale(1.1);
+}
+
+.text-primary{
+    color: var(--color-texto-secundario) !important;
+}
+
+
+.card {
+    width: 80%; 
+}
+
+.card-img-top{
+    max-height: 20rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+
+  width: 10%;
+
+}
+
+.nav-pills .nav-item .nav-link{
+    border-radius: 0;
+    text-align: center;
+}
+
+.nav-pills .nav-item .nav-link:hover, .nav-link:focus {
+    transform: none;
+    background-color: var(--color-hover);
+}
+
+.nav-pills .nav-link.active{
+    background-color: var(--color-hover);
+    
+}
+
+.tab-content > .active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+  
+.btn-primary{
+    width: 100%;
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-secundario);
+}
+
+.btn-primary:hover{
+    background-color: var(--color-texto);
+    color: var(--color-secundario);
+}
+
+.modal{
+    width: 100%;
+    margin: auto;
+}
+
+.modal-dialog{
+    max-width: 50%;
+}
+
+.modal-header{
+    color: var(--color-secundario);
+}
+
+.modal-body{
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+    padding: 1.5rem;
+    line-height: 2;
+}
+
+.form-control{
+    transition: all 1s;
+}
+
+.form-control:focus{
+    transform: scale(1.05);
+    box-shadow: 4px 4px 4px var(--color-hover);
+}
+
+.form-control:invalid{
+    color: red;
+}
+
+.form-control:valid{
+    color: green;
+}
+
+form .btn-primary{
+    background-color: var(--color-primario);
+    border: 1px solid var(--color-borde-brillante);
+    transition: all 1s;
+}
+
+form .btn-primary:hover{
+    transform: scale(1.1);
+}
+
+@media (max-width: 992px) {
+    .container-fluid{
+        padding: 0;
+    }
+
+    .navbar-brand{
+        padding: 0;
+        margin-left: 1rem;
+    }
+
+    .navbar-toggler{
+        margin-right: 1rem;
+    }
+
+    .nav-item{
+        width: 100%;
+        /* padding-left: 1rem; */
+    }
+
+    .nav-link{
+        padding-left: 1rem;
+        border-radius: 0;
+    }
+
+    .nav-link:hover {
+        background-color: var(--color-hover);
+        transform: none !important;
+    }
+ 
+    .modal-dialog{
+        max-width: 100%;
+    }
+    
+    .modal-body{
+        /* padding: 1.5rem; */
+        line-height: 2;
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel-indicators button:nth-child(n+3) {
+        display: none;
+    }
+}
+
+
+/* Mis estilos */
+.hero{
+    /* background-clip: url(../videos/videoHero.mp4); */
+    /* background: url(../videos/videoHero.mp4); */
+    background-position: center;
+}
+
+#video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto asegura que el video cubra toda el área sin deformarse */
+    z-index: -1; /* Coloca el video en el fondo */
+}
+
+.hero-content{
+    background-color: var(--transparente);
+    border-radius: 25px;
+}
+
+.fondo{
+    background-color: var(--color-primario);
+    height: 5rem;
+}
+
+.custom-nav-section{
+    /* background-color: var(--color-secundario); */
+    border-radius: var(--borde-radius);
+    /* height: 3rem;
+    width: 30rem; */
+}
+
+.mejoresAnimes, .mejoresMangas{
+    background-color: var(--color-primario);
+}
+
+.animesDiarios{
+    background-color: var(--color-secundario);
+}
+
+.cardsDiarios{
+    width: 17rem;
+    min-height: 25rem;
+    max-height: 25rem;
+}
+
+.card-manga{
+    width: 20rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.footer{
+    background-color: var(--color-primario);
+}
+
+.titulo{
+    color: var(--color-texto-secundario);
+}
+
+.login{
+    background-color: var(--color-secundario);
+}
+
+.texto-formulario-titulo{
+    color: var(--color-texto-secundario);
+    font-size: 1.2rem;
+}
+
+.texto-formulario{
+    color: var(--color-texto);
+}
+
+
+@media (max-width: 992px) {
+    .custom-nav-section{
+        background-color: var(--color-primario);
+        border-radius: 0;
+    }
+
+    .cardsDiarios{
+        min-height: 15rem;
+    }
+}
+
+

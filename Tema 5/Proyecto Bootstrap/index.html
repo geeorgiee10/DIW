@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Animanga List</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./images/logo.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    </head>
+
+    <body>
+        <header>
+          <nav class="navbar navbar-expand-lg fondo position-fixed z-3 w-100">
+            <div class="container-fluid">
+              <a class="navbar-brand fs-1 fs-sm-3" href="#"><i class="fa-brands fa-autoprefixer"></i> Animanga List</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav custom-nav-section align-items-center justify-content-center">
+                  <li class="nav-item px-lg-2">
+                    <a class="nav-link fs-4" href="#mejoresAnimes">Mejores animes</a>
+                  </li>
+                  <li class="nav-item px-lg-2">
+                    <a class="nav-link fs-4" href="#animesDiarios">Animes diarios</a>
+                  </li>
+                  <li class="nav-item px-lg-2">
+                    <a class="nav-link fs-4" href="#mejoresMangas">Mejores mangas</a>
+                  </li>
+                  <li class="nav-item px-lg-2">
+                    <a class="nav-link fs-4" href="#login">Login</a>
+                  </li>
+              </ul>
+                
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <main class="main">
+          <section class="container-fluid hero vh-100 d-flex justify-content-center align-items-center">
+            <video autoplay muted loop id="video-bg">
+              <source src="./videos/video.webapp" type="video/mp4">
+            </video>
+
+            <div class="hero-content d-flex justify-content-center align-items-center flex-column py-2 px-2 w-80 h-auto w-md-80">
+              <h1 class="text-white display-1 p-4 fs-1 fs-md-1 text-center">Explora el Mundo del Anime</h1>
+              <p class="text-white lead text-center">Sumérgete en tus series y mangas favoritos. Todo lo que amas, en un solo lugar.</p>
+              <a href="#mejoresAnimes" class="btn btn-danger btn-lg mt-3">Descubre Más</a>
+            </div>
+          </section>
+
+          <div class="mejoresAnimes h-100" id="mejoresAnimes">
+
+            <h2 class="text-center text-primary fw-bold pt-4">Mejores Animes</h2>
+            <div id="carouselExampleIndicators" class="carousel slide d-none d-md-flex justify-content-center w-100 h-100 mx-auto pt-4">
+              <div class="carousel-indicators w-50 mx-auto">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              </div>
+              <div class="carousel-inner container-fluid mb-5 mx-5">
+                <div class="carousel-item active mb-3">
+                    <div class="row">
+
+                        <div class="col-12 col-md-4 ">
+                            <div class="card w-50 mx-auto">
+                                <img src="./images/carrusel/frieren.jpg" class="card-img-top w-100 h-auto" alt="Frieren: Beyond Journey's End">
+                                <div class="card-body">
+                                  <audio controls class="w-100">
+                                    <source src="./audios/frieren.mp3" type="audio/mpeg">
+                                  </audio>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card w-50 mx-auto">
+                                <img src="./images/carrusel/bleach.jpg" class="card-img-top w-100 h-auto" alt="Bleach">
+                                <div class="card-body">
+                                  <audio controls class="w-100">
+                                    <source src="./audios/bleach.mp3" type="audio/mpeg">
+                                  </audio>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card w-50 mx-auto">
+                                <img src="./images/carrusel/dragonBall.jpg" class="card-img-top w-100 h-auto" alt="Dragon Ball">
+                                <div class="card-body">
+                                  <audio controls class="w-100">
+                                    <source src="./audios/dragonBall.mp3" type="audio/mpeg">
+                                  </audio>
+                                </div>
+                              </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carousel-item mb-3">
+                    <div class="row">
+
+                        <div class="col-12 col-md-4">
+                            <div class="card w-50 mx-auto">
+                                <img src="./images/carrusel/naruto.jpg" class="card-img-top w-100 h-auto" alt="Naruto">
+                                <div class="card-body">
+                                  <audio controls class="w-100">
+                                    <source src="./audios/naruto.mp3" type="audio/mpeg">
+                                  </audio>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card w-50 mx-auto">
+                                <img src="./images/carrusel/one_piece.jpg" class="card-img-top w-100 h-auto" alt="One Piece">
+                                <div class="card-body">
+                                  <audio controls class="w-100">
+                                    <source src="./audios/onePiece.mp3" type="audio/mpeg">
+                                  </audio>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="card w-50 mx-auto">
+                                <img src="./images/carrusel/aphotecary.jpg" class="card-img-top w-100 h-auto" alt="The Aphotecary Diaries">
+                                <div class="card-body">
+                                  <audio controls class="w-100">
+                                    <source src="./audios/aphotecary.mp3" type="audio/mpeg">
+                                  </audio>
+                                </div>
+                              </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <div id="carouselExampleIndicators2" class="carousel slide d-flex d-md-none justify-content-center w-100 h-100 mx-auto pt-4">
+              <div class="carousel-indicators w-50 mx-auto">
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              </div>
+              <div class="carousel-inner mb-5 w-75 d-flex">
+                
+                <div class="carousel-item active w-100">
+                  <div class="card w-50 mx-auto">
+                    <img src="./images/carrusel/frieren.jpg" class="card-img-top w-100 h-auto" alt="Frieren: Beyond Journey's End">
+                    <div class="card-body">
+                      <audio controls class="w-100">
+                        <source src="./audios/frieren.mp3" type="audio/mpeg">
+                      </audio>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item w-100">
+                  <div class="card w-50 mx-auto">
+                    <img src="./images/carrusel/bleach.jpg" class="card-img-top w-100 h-auto" alt="Bleach">
+                    <div class="card-body">
+                      <audio controls class="w-100">
+                        <source src="./audios/bleach.mp3" type="audio/mpeg">
+                      </audio>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item w-100">
+                  <div class="card w-50 mx-auto">
+                    <img src="./images/carrusel/dragonBall.jpg" class="card-img-top w-100 h-auto" alt="Dragon Ball">
+                    <div class="card-body">
+                      <audio controls class="w-100">
+                        <source src="./audios/dragonBall.mp3" type="audio/mpeg">
+                      </audio>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item w-100">
+                  <div class="card w-50 mx-auto">
+                    <img src="./images/carrusel/naruto.jpg" class="card-img-top w-100 h-auto" alt="Naruto">
+                    <div class="card-body">
+                      <audio controls class="w-100">
+                        <source src="./audios/naruto.mp3" type="audio/mpeg">
+                      </audio>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item w-100">
+                  <div class="card w-50 mx-auto">
+                    <img src="./images/carrusel/one_piece.jpg" class="card-img-top w-100 h-auto" alt="One Piece">
+                    <div class="card-body">
+                      <audio controls class="w-100">
+                        <source src="./audios/onePiece.mp3" type="audio/mpeg">
+                      </audio>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="carousel-item w-100">
+                  <div class="card w-50 mx-auto">
+                    <img src="./images/carrusel/aphotecary.jpg" class="card-img-top w-100 h-auto" alt="The Aphotecary Diaries">
+                    <div class="card-body">
+                      <audio controls class="w-100">
+                        <source src="./audios/aphotecary.mp3" type="audio/mpeg">
+                      </audio>
+                    </div>
+                  </div>
+                </div>
+
+                
+
+              </div>
+              <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+          </div>  
+          
+
+          <div class="animesDiarios h-100 " id="animesDiarios">
+            <h2 class="text-center text-primary fw-bold pt-4">Mejores animes de la temporada de invierno 2025</h2>
+            <ul class="nav nav-pills d-flex align-items-center justify-content-center" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="pill-tab-0" data-bs-toggle="pill" href="#pill-tabpanel-0" role="tab" aria-controls="pill-tabpanel-0" aria-selected="true">Lunes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pill-tab-1" data-bs-toggle="pill" href="#pill-tabpanel-1" role="tab" aria-controls="pill-tabpanel-1" aria-selected="false">Martes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pill-tab-2" data-bs-toggle="pill" href="#pill-tabpanel-2" role="tab" aria-controls="pill-tabpanel-2" aria-selected="false">Miércoles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pill-tab-3" data-bs-toggle="pill" href="#pill-tabpanel-3" role="tab" aria-controls="pill-tabpanel-3" aria-selected="true">Jueves</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pill-tab-4" data-bs-toggle="pill" href="#pill-tabpanel-4" role="tab" aria-controls="pill-tabpanel-4" aria-selected="false">Viernes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pill-tab-5" data-bs-toggle="pill" href="#pill-tabpanel-5" role="tab" aria-controls="pill-tabpanel-5" aria-selected="false">Sábado</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pill-tab-6" data-bs-toggle="pill" href="#pill-tabpanel-6" role="tab" aria-controls="pill-tabpanel-6" aria-selected="false">Domingo</a>
+              </li>
+            </ul>
+            <div class="tab-content py-3 mt-2">
+              <div class="tab-pane active " id="pill-tabpanel-0" role="tabpanel" aria-labelledby="pill-tab-0">
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/lunes/arifureta.jpg" class="card-img-top" alt="Arifureta">
+                  <div class="card-body">
+                    <h5 class="card-title">Arifureta Season 3</h5>
+                  </div>
+                </div>
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/lunes/marriage.jpg" class="card-img-top" alt="My happy Marriage">
+                  <div class="card-body">
+                    <h5 class="card-title">My Happy Marriage</h5>
+                  </div>
+                </div>
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/lunes/medaka.jpg" class="card-img-top" alt="Medaka Kuroiwa">
+                  <div class="card-body">
+                    <h5 class="card-title">Medaka Kuroiwa</h5>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="tab-pane" id="pill-tabpanel-1" role="tabpanel" aria-labelledby="pill-tab-1">
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/martes/amagami.jpg" class="card-img-top" alt="magami-san Chi no Enmusubi">
+                  <div class="card-body">
+                    <h5 class="card-title">Amagami-san Chi no Enmusubi</h5>
+                  </div>
+                </div>
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/martes/hazureSkill.jpg" class="card-img-top" alt="Hazure Skill 'Kinomi Master'">
+                  <div class="card-body">
+                    <h5 class="card-title">Hazure Skill "Kinomi Master"</h5>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="tab-pane" id="pill-tabpanel-2" role="tabpanel" aria-labelledby="pill-tab-2">
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/miercoles/reZero.jpg" class="card-img-top" alt="Re:Zero">
+                  <div class="card-body">
+                    <h5 class="card-title">Re:Zero Season 3</h5>
+                  </div>
+                </div>
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/miercoles/honeyLemon.jpg" class="card-img-top" alt="Honey Lemon Soda">
+                  <div class="card-body">
+                    <h5 class="card-title">Honey Lemon Soda</h5>
+                  </div>
+                </div>
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/miercoles/magicMaker.jpg" class="card-img-top" alt="Magic Maker">
+                  <div class="card-body">
+                    <h5 class="card-title">Magic Maker</h5>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="tab-pane" id="pill-tabpanel-3" role="tabpanel" aria-labelledby="pill-tab-3">
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios//jueves/blueBox.jpg" class="card-img-top" alt="Blue Box">
+                  <div class="card-body">
+                    <h5 class="card-title">Blue Box (Ao no Hako)</h5>
+                  </div>
+                </div>
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/jueves/drStone.jpg" class="card-img-top" alt="Dr. Stone: Science Future">
+                  <div class="card-body">
+                    <h5 class="card-title">Dr. Stone: Science Future</h5>
+                  </div>
+                </div>
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/jueves/aquarion.jpg" class="card-img-top" alt="Aquarion: Myth of Emotions">
+                  <div class="card-body">
+                    <h5 class="card-title">Aquarion: Myth of Emotions</h5>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="tab-pane" id="pill-tabpanel-4" role="tabpanel" aria-labelledby="pill-tab-4">
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/viernes/dragonBallDaima.jpg" class="card-img-top" alt="Dragon Ball Daima">
+                  <div class="card-body">
+                    <h5 class="card-title">Dragon Ball Daima</h5>
+                  </div>
+                </div>
+
+                <div class="card cardsDiarios">
+                  <img src="./images/carrusel/aphotecary.jpg" class="card-img-top" alt="The Apothecary Diaries">
+                  <div class="card-body">
+                    <h5 class="card-title">The Apothecary Diaries</h5>
+                  </div>
+                </div>
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/viernes/hate.jpg" class="card-img-top" alt="I'm Getting Married to a Girl I Hate in My Class">
+                  <div class="card-body">
+                    <h5 class="card-title d-none d-md-block">I'm Getting Married to a Girl I Hate in My Class</h5>
+                    <h5 class="card-title d-block d-md-none">Kurakon</h5>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="tab-pane" id="pill-tabpanel-5" role="tabpanel" aria-labelledby="pill-tab-5">
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/sabado/soloLeveling.jpg" class="card-img-top" alt="Solo Leveling">
+                  <div class="card-body">
+                    <h5 class="card-title">Solo Leveling</h5>
+                  </div>
+                </div>
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/sabado/sakamoto.jpg" class="card-img-top" alt="Sakamoto Days">
+                  <div class="card-body">
+                    <h5 class="card-title">Sakamoto Days</h5>
+                  </div>
+                </div>
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/sabado/blueExorcist.jpg" class="card-img-top" alt="Blue Exorcist">
+                  <div class="card-body">
+                    <h5 class="card-title">Blue Exorcist</h5>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="tab-pane" id="pill-tabpanel-6" role="tabpanel" aria-labelledby="pill-tab-6">
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/domingo/shangrila.jpg" class="card-img-top" alt="Shangri-La Frontier">
+                  <div class="card-body">
+                    <h5 class="card-title">Shangri-La Frontier</h5>
+                  </div>
+                </div>
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/domingo/hanako.jpg" class="card-img-top" alt="Toilet-Bound Hanako-kun">
+                  <div class="card-body">
+                    <h5 class="card-title">Toilet-Bound Hanako-kun</h5>
+                  </div>
+                </div>
+
+                <div class="card cardsDiarios">
+                  <img src="./images/diarios/domingo/100girlfriend.jpg" class="card-img-top" alt="The 100 Girlfriends">
+                  <div class="card-body">
+                    <h5 class="card-title">The 100 Girlfriend</h5>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="mejoresMangas h-100" id="mejoresMangas">
+            <h2 class="text-center text-primary fw-bold pt-4">Mejores mangas actuales</h2>
+
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-3">
+
+              <div class="card card-manga">
+                <img src="./images/manga/frieren.jpg" class="card-img-top" alt="Frieren: Beyond Journey's End">
+                <div class="card-body">
+                  <h5 class="card-title">Frieren: Beyond Journey's End</h5>
+                  <button data-bs-target="#modal1" data-bs-toggle="modal" class="btn btn-primary">Ver más</button>
+                </div>
+              </div>
+  
+              <div class="card card-manga">
+                <img src="./images/manga/jujutsu.jpg" class="card-img-top" alt="Jujutsu Kaisen">
+                <div class="card-body">
+                  <h5 class="card-title">Jujutsu Kaisen</h5>
+                  <button data-bs-target="#modal3" data-bs-toggle="modal" class="btn btn-primary">Ver más</button>
+                </div>
+              </div>
+  
+              <div class="card card-manga">
+                <img src="./images/carrusel/one_piece.jpg" class="card-img-top" alt="One Piece">
+                <div class="card-body">
+                  <h5 class="card-title">One Piece</h5>
+                  <button data-bs-target="#modal2" data-bs-toggle="modal" class="btn btn-primary">Ver más</button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="login h-100" id="login">
+            <h2 class="text-center text-primary fw-bold pt-4">Unete para más novedades</h2>
+            <form class="w-50 mx-auto py-3">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label texto-formulario-titulo">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                <div id="emailHelp" class="form-text texto-formulario">Nunca compartiremos tu correo con nadie más.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label texto-formulario-titulo">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" required>
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label texto-formulario" for="exampleCheck1">Check me out</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+          </div>
+
+        </main>
+        <footer class="text-white py-4 footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <h3 class="titulo">Sobre nosotros</h3>
+                <p>Nos dedicamos a ofrecer el mejor contenido y los recursos más completos para los fanáticos del manga en todo el mundo. ¡Únete a nuestra comunidad y mantente al día!</p>
+              </div>
+              <div class="col-md-4 mb-3">
+                <h3 class="titulo">Contáctanos</h3>
+                <p>Email: animangalist@gmail.com</p>
+                <p>Phone: +123 456 7890</p>
+              </div>
+              <div class="col-md-4 mb-3">
+                <h3 class="titulo">Siguenos:</h3>
+                <div>
+                  <a href="https://www.facebook.com" target="_blank" class="text-white me-3 fs-1"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="https://www.twitter.com" target="_blank" class="text-white me-3 fs-1"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="https://www.instagram.com" target="_blank" class="text-white me-3 fs-1"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="text-center border-top pt-3 mt-3 w-100">
+              <p class="mb-0">© 2025 Animanga List Website. All Rights Reserved.</p>
+            </div>
+          </div>
+        </footer>
+
+        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title fs-5" id="exampleModalLabel">Frieren: Beyond Journey's End</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Frieren: Beyond Journey’s End es una emotiva historia que sigue a Frieren, una elfa maga que, tras derrotar al Rey Demonio junto a su grupo de héroes,
+                enfrenta la inmortalidad viendo envejecer y morir a sus compañeros. En su viaje, Frieren busca comprender los sentimientos humanos y
+                aprender a valorar las conexiones que antes daba por sentadas.
+                Una obra introspectiva sobre el paso del tiempo, la amistad y el significado de la vida.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title fs-5" id="exampleModalLabel">One Piece</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                One Piece sigue la aventura de Monkey D. Luffy, un joven pirata con el sueño de encontrar el legendario tesoro conocido como "One Piece" y convertirse en el Rey de los Piratas.
+                Junto a su variopinta tripulación, los Sombrero de Paja, Luffy recorre los mares enfrentando enemigos poderosos,
+                descubriendo islas increíbles y desentrañando los misterios del mundo. Una épica historia de amistad, sueños y libertad que ha cautivado a generaciones.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title fs-5" id="exampleModalLabel">Jujutsu Kaisen</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Jujutsu Kaisen narra la historia de Yuji Itadori, un estudiante de secundaria que, tras consumir un dedo maldito del legendario espíritu Sukuna,
+                adquiere poderes sobrenaturales. Para controlar esta maldición, Yuji se une a los hechiceros jujutsu, 
+                quienes luchan contra maldiciones malignas que amenazan a la humanidad. Con intensas batallas, complejos dilemas y oscuros misterios,
+                esta serie combina acción y drama en un mundo lleno de peligros sobrenaturales.
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    </body>
+</html>

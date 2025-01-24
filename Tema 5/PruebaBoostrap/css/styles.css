@@ -4,6 +4,7 @@
 /* Mis variables */
 :root{
     --transparente: #00000055;
+    --color-primario: #FF6F61;
 
     --fuente-titulos: '"Cuprum", serif';
 }
@@ -15,6 +16,25 @@ body{
 
 .nav-link:hover, .nav-link:focus{
     background-color: var(--transparente);
+    color: white;
+}
+
+.nav-link, .navbar-brand{
+    color: white;
+}
+
+.btn-primary{
+    background-color: var(--color-primario);
+    border: 0;
+    width: 100%;
+    transition: all 1s;
+}
+
+.btn-primary:hover{
+    color: var(--color-primario);
+    background-color: white;
+    border: 1px solid var(--color-primario);
+    transform: scale(1.05);
 }
 
 
@@ -27,4 +47,8 @@ body{
 .hero h1{
     background-color: var(--transparente);
     border-radius: 25px;
+}
+
+.fondo{
+    background-color: #2C3E50;
 }
