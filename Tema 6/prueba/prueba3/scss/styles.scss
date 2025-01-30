@@ -1,0 +1,87 @@
+$primary-color: #f4f4f4;
+$text-color: #333;
+$header-bg: #e0e0e0;
+$footer-bg: #d1d1d1;
+$random-colors: (pink, lightgreen, lightblue, lightcoral, lightgray, lightgoldenrodyellow);
+
+$colores-aleatorios: ();
+
+@while length($colores-aleatorios) < length($random-colors) {
+    $random-index: random(length($random-colors));
+    $random-color: nth($random-colors, $random-index);
+
+    @if not index($colores-aleatorios, $random-color) {
+        $colores-aleatorios: append($colores-aleatorios, $random-color);
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $primary-color;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: $header-bg;
+    padding: 20px;
+    text-align: center;
+
+    .header-container {
+        @include flex-center;
+        flex-direction: column;
+        
+        .logo {
+            width: 100px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: inline;
+                margin: 0 10px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.social-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 20px;
+
+    .social-card {
+      padding: 15px;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+  
+      @for $i from 1 through length($colores-aleatorios) {
+          &:nth-child(#{$i}) {
+              background-color: nth($colores-aleatorios, $i);
+          }
+      }
+    }
+}
+
+footer {
+    background-color: $footer-bg;
+    padding: 10px;
+    text-align: center;
+
+    .footer-container {
+        @include flex-center;
+        flex-direction: column;
+    }
+}

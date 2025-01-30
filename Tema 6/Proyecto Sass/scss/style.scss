@@ -1,0 +1,19 @@
+$color-fondo: bisque;
+$color-texto:royalblue;
+
+$size-md: 1.25rem;
+
+.hero{
+    height: 75vh;
+    background-color: $color-fondo;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        color: $color-texto;
+        font-size: $size-md;
+    }
+}
+

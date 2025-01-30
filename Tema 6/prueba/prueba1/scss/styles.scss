@@ -1,0 +1,64 @@
+$color-fondo: #9B8989;
+$color-h1: #CBCBCB;
+$color-texto: #f2d3b6;
+$radio-pequeño: 5px;
+$color-fondo2: #dac6c6;
+$color-texto2:#d1853e;
+
+@mixin centrar($direccion: row, $justifica:center, $alinea: center, $gap: 1rem){
+    display: flex;
+    flex-direction: $direccion;
+    justify-content: $justifica;
+    align-items: $alinea;
+    gap: $gap;
+    margin: 1rem 0;
+}
+
+@mixin li($color: yellow){
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: $color;
+}
+
+@mixin ancho(){
+    width: 99%;
+    margin: 0 0.1rem;
+}
+
+.container{
+    background-color: $color-fondo;
+    padding-top: 0.2rem;
+    h1{
+        @include ancho();
+        border-radius: $radio-pequeño;
+        background-color: $color-h1;
+    }
+
+    ul{
+        @include centrar();
+        li{
+            @include li($color-texto);
+        }
+    }
+
+    .parrafo{
+        background-color: $color-fondo2;
+        @include ancho();
+
+        h2{
+            color: $color-texto2;   
+        }
+    }
+
+    footer{
+        background-color: $color-h1;
+        @include centrar();
+
+        span{
+            color: white;
+        }
+    }
+}
+
