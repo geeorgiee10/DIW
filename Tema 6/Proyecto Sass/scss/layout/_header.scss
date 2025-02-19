@@ -1,0 +1,61 @@
+@use "../mixin" as *;
+@use "../functions" as *;
+@use "../variables" as *;
+
+.header {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    @include flex-center($direccion: row, $justifica: space-between, $alinea: center, $gap: 2rem, $margin: 0, $flex-wrap: nowrap);
+    background-color: color(primary);
+    padding: 1.5rem 3rem;
+    color: color(text);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    @include media("very-large"){
+        @include flex-center($direccion:column, $justifica: space-between, $margin: 0rem);
+    }
+
+    .header-logo{
+      //  width: 15%;
+      //  height: auto;
+        @include tamaño($width: 20%, $height: auto);
+        img{
+            @include tamaño();
+            object-fit: cover;
+        }
+
+        @include media("very-large"){
+            @include tamaño($width: 50%, $height: auto);
+        }
+    }
+
+    .nav {
+        @include nav();  
+
+        &.active{
+            @include media("very-large"){
+                display: flex;
+            }
+        }
+    }
+    
+    .menu-icon {
+        cursor: pointer;
+        @include flex-center($display: none, $direccion: column, $justifica:space-around, $gap: 0);
+        @include tamaño($width: 10%, $height: 55%);
+        background: color(tertiary);
+        border: none;
+        border-radius: $border-radius;
+        //z-index: 2;
+        @include media("very-large"){
+            @include tamaño($width: 7rem, $height: 4rem);
+            //background-color: aqua;
+            @include flex-center($display: flex, $direccion: column, $justifica:center, $margin: 0);
+        }
+        .bar {
+            @include tamaño($width: 40%, $height: 5%);
+            background-color: #fff;
+            border-radius: $border-radius;
+        }
+    }
+}

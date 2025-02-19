@@ -1,0 +1,131 @@
+@use "functions" as *;
+@use "variables" as *;
+
+@mixin flex-center($display: flex, $direccion: row, $justifica:center, $alinea: center, $gap: 1rem, $margin: 1rem, $flex-wrap: nowrap){
+    display: $display;
+    flex-direction: $direccion;
+    justify-content: $justifica;
+    align-items: $alinea;
+    flex-wrap: $flex-wrap;
+    gap: $gap;
+    margin: $margin;
+}
+
+@mixin tamaño($width: 100%, $height: 100%){
+    height: $height;
+    width: $width;
+}
+
+@mixin grid($columnas: 8, $filas: 4, $gap: 1.6rem, $rowgap: 1.6rem) {
+    display: grid;
+    gap: $gap;
+    grid-template-columns: minmax(6rem, 1fr) repeat($columnas, minmax(min-content, 16rem)) minmax(6rem, 1fr);
+    grid-template-rows: repeat($filas, min-content);
+    grid-row-gap: $rowgap;
+}
+
+@mixin estilo-encabezados() {
+    @for $i from 1 through 6 {
+      h#{$i} {
+        font-family: $font-family-secondary; 
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 10px;
+  
+        font-size: font-size(5xl) - ($i * 0.65); 
+  
+        color: color(button); 
+        @include media("medium"){
+            font-size: font-size(4xl) - ($i * 0.45); 
+        }
+      }
+    }
+  }
+  
+  
+
+@mixin nav() {
+    @include tamaño($height:auto);
+    @include flex-center($justifica: space-between, $gap: 1.2rem);
+    
+    @include media("very-large"){
+        @include flex-center($display: none, $direccion: column, $alinea: center, $margin: 0rem, $flex-wrap: nowrap);
+        @include tamaño($height: auto);
+    }
+    &-list {
+        list-style: none;
+        @include flex-center($justifica: center, $gap: font-size(4xl));
+      
+        @include media("very-large"){
+            @include flex-center($direccion: column, $gap: 0, $margin: 0);
+            @include tamaño($height: auto);
+            padding: 0;
+        }
+
+      &-item {
+        @include media("very-large"){
+            @include tamaño($width: 95%, $height: auto);
+            @include flex-center($margin: 0, $gap: 0);
+        }
+
+          .nav-link {
+              text-decoration: none;
+              font-family: $font-family-secondary;
+              font-size: font-size(2xl);
+              font-weight: bold;
+              color: color(text);
+              transition: all 0.3s;
+
+              @include media("very-large"){
+                padding: font-size(md);
+                text-align: center;
+                @include tamaño($width: 100%, $height: auto);
+              }
+
+              &:hover {
+                  color: color(button);
+                  background-color: color(secondary);
+                  padding: font-size(xs) font-size(md);
+                  border-radius: 5px;
+              }
+          }
+          
+      }
+  }
+  .btn{
+      background-color: color(button);
+      color: color(text);
+      border: none;
+      padding: font-size(sm) font-size(2xl);
+      font-size: font-size(lg);
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+          background-color: color(secondary);
+          color: color(button);
+      }
+  }
+    
+
+}
+
+
+@mixin media($clave){
+    $size: map-get($map: $sizes, $key: $clave);
+    @media only screen and (max-width: $size) {
+        @content;
+    }
+}
+
+@mixin sombra($sombraX, $sombraY, $transparencia, $color) {
+    box-shadow: $sombraX $sombraY $transparencia $color;
+}
+
+@mixin sombraTexto($sombraX, $sombraY, $transparencia, $color){
+    text-shadow: $sombraX $sombraY $transparencia $color;
+}
+  

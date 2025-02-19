@@ -1,0 +1,11 @@
+footer {
+    background-color: $footer-bg;
+    padding: 10px;
+    text-align: center;
+    grid-row: 3 / -1;
+    grid-column: 1 / -1;
+
+    .footer-container {
+        @include flex-center();
+    }
+}

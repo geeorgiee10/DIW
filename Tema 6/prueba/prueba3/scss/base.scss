@@ -1,0 +1,15 @@
+@while length($colores-aleatorios) < length($random-colors) {
+    $random-index: random(length($random-colors));
+    $random-color: nth($random-colors, $random-index);
+
+    @if not index($colores-aleatorios, $random-color) {
+        $colores-aleatorios: append($colores-aleatorios, $random-color);
+    }
+}
+
+.container{
+    @include grid($columnas: 8, $filas: 4);
+}
+
+
+@include estilo-encabezados();

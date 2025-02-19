@@ -1,0 +1,69 @@
+@use "../mixin" as *;
+@use "../functions" as *;
+@use "../variables" as *;
+
+.informacion {
+    grid-row: 5 / 6;  
+    grid-column: 1 / -1;
+    @include tamaño($width: 100%, $height: auto);
+    @include flex-center($direccion: column, $margin: 0);
+
+    .info-container {
+        @include flex-center($margin: 0);
+        @include tamaño();
+        @include media("medium"){
+            @include tamaño($height: auto);
+            @include flex-center($margin: 0, $justifica: start, $direccion:column, $gap: 0);
+        }
+        .info-item {
+            @include tamaño($width: 50%, $height: auto);
+            @include media("medium"){
+                @include tamaño($width: 80%);
+             }
+            .info-img {
+                @include tamaño($width: 80% ,$height: 30%);
+                border-radius: $border-radius2;
+                overflow: hidden;
+                @include media("medium"){
+                    @include tamaño($height: 40%);
+                }
+    
+                & img {
+                    @include tamaño();
+                    object-fit: cover;
+                    background-color: color(tertiary);
+                }
+            }
+    
+            .info-text {
+                @include tamaño($width: 80% ,$height: 30%);
+                @include media("medium"){
+                    @include tamaño($height: auto);
+                }
+                &-p {
+                    font-size: font-size(md);
+                }
+
+                .subredes{
+                    @include flex-center($margin: 0);
+                    .iconos{
+                        text-decoration: none;
+                        color: color(text);
+                        font-size: font-size(5xl);
+                        transition: all 0.5 ease;
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+
+        .info-item:nth-child(1){
+            @include flex-center($direccion: column-reverse);
+            @include media("medium"){
+                @include flex-center($direccion: column, $margin: 0);
+            }
+        }
+    }
+}

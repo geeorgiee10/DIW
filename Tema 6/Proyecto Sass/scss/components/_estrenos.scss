@@ -1,0 +1,69 @@
+@use "../mixin" as *;
+@use "../functions" as *;
+@use "../variables" as *;
+
+.estrenos{
+    grid-row: 4 / 5;  
+    grid-column: 1 / -1;
+
+    @include tamaño($width: 100%, $height: 90vh);
+    @include flex-center($direccion: column, $margin: 0);
+    background: linear-gradient(135deg, rgba(color(secondary), 0.8), rgba(color(tertiary), 0.8));
+
+    text-align: center;
+    padding: font-size(lg);
+    @include media("medium"){
+        @include tamaño($width: 100%, $height:60vh);
+    }
+    .carousel {
+        @include tamaño();
+        overflow: hidden;
+        @include flex-center($margin: 0, $gap:0);
+    
+        &-item {
+            @include flex-center($margin: 0);
+            @include tamaño();
+            transition: transform 0.5s ease;
+            
+        
+            &-img {
+                @include tamaño($width: 60%, $height: auto);
+                @include media("medium"){
+                    @include tamaño($width: 100%, $height:auto);
+                }
+                & img{
+                    @include tamaño();
+                    object-fit: cover;
+                }
+            }
+        } 
+    }
+
+    .carousel-prev, .carousel-next{
+        position: absolute;
+        background-color: color(button);
+        color: color(text);
+        border: none;
+        padding: font-size(md);
+        font-size: font-size(xl);
+        cursor: pointer;
+        z-index: 1;  
+        @include media("medium"){
+            padding: font-size(xs);
+            font-size: font-size(sm);
+        }
+        
+        &:hover{
+            transform: scale(1.1);
+            background-color: color(text-highlight);
+        }
+    }
+    .carousel-prev {
+        left: font-size(md);
+    }
+    
+    .carousel-next {
+        right: font-size(md);
+    }
+    
+}

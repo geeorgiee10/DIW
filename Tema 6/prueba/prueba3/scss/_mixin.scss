@@ -1,0 +1,64 @@
+@mixin flex-center($direccion: row, $justifica:center, $alinea: center, $gap: 1rem, $margin: 1rem, $flex-wrap: nowrap){
+    display: flex;
+    flex-direction: $direccion;
+    justify-content: $justifica;
+    align-items: $alinea;
+    flex-wrap: $flex-wrap;
+    gap: $gap;
+    margin: $margin;
+}
+
+@mixin tamaño($width: 100%, $height: 100%){
+    height: $height;
+    width: $width;
+}
+
+@mixin grid($columnas: 8, $filas: 4, $gap: 1.6rem) {
+    display: grid;
+    gap: $gap;
+    grid-template-columns: minmax(6rem, 1fr) repeat($columnas, minmax(min-content, 16rem)) minmax(6rem, 1fr);
+    grid-template-rows: repeat($filas, min-content);
+    grid-row-gap: 1.6rem;
+    background-color: $color-tertiary;
+}
+
+@mixin estilo-encabezados() {
+    @for $i from 1 through 6 {
+      h#{$i} {
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 10px;
+
+        font-size: #{3 - ($i * 0.65)}rem;
+
+        color: hsl(55 * $i, 80%, 30%);
+      }
+    }
+}
+
+@mixin nav() {
+    @include tamaño();
+    list-style: none;
+
+    &-item{
+      font-weight: bold;
+    }
+
+    &-link{
+      color: black;
+      text-decoration: none;
+      transition: all 0.3s;
+      border-radius: 10px;
+    }
+
+    &-link:hover{
+      color: $color-tertiary;
+      background-color:aliceblue;
+      padding: 1rem;
+    }
+    
+
+}
+    

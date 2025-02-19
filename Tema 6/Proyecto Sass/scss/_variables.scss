@@ -1,0 +1,39 @@
+
+$colors: (
+    primary: #2A1E5C,     // Fondo principal - Morado nocturno  
+    secondary: #443C96,     // Acentos principales - Azul violeta  
+    tertiary: #6D67A3,      // Detalles y bordes - Lavanda oscuro  
+    text-highlight: #A36BAE, // Texto destacado - Rosa empolvado  
+    button: #D69FA2,        // Botones y llamadas a la acción - Melocotón suave  
+    border: #AD6C51,        // Bordes y detalles sutiles - Cobre apagado  
+    text: #FFFFFF,
+    header-background: #2A1E5C 
+);
+
+$font-family-primary: 'Poppins', sans-serif;
+$font-family-secondary: 'Roboto', sans-serif;
+
+$font-sizes: (
+    xs: 0.75rem,  
+    sm: 0.875rem, 
+    md: 1rem,   
+    lg: 1.125rem, 
+    xl: 1.25rem,  
+    2xl: 1.5rem,  
+    3xl: 1.875rem,
+    4xl: 2.25rem,
+    5xl: 3rem, 
+);
+
+$border-radius: 20px;
+$border-radius2: 10px;
+
+
+$sizes: (
+  "very-small": 480px,
+  "small": 768px,
+  "medium": 1024px,
+  "large": 1280px,
+  "very-large": 1355px,
+  "extra-large": 1440px
+);

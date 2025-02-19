@@ -1,0 +1,14 @@
+@use "variables" as *;
+
+@function color($name) {
+    @if map-has-key($colors, $name) {
+        @return map-get($colors, $name);
+    }
+}
+
+@function font-size($name) {
+    @if map-has-key($font-sizes, $name) {
+        @return map-get($font-sizes, $name);
+    }
+}
+

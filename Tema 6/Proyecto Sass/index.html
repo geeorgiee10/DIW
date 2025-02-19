@@ -4,13 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Ejemplo SaSS</title>
+    <title>Cine Vía Láctea</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <script src="./js/index.js"></script>
 </head>
 <body>
     
-    <section class="hero">
-        <h1>Hola Mundo</h1>
-    </section>
+    <div class="container">
+        <header class="header">
+
+            <div class="header-logo">
+                <img src="./img/logo.png" alt="Logo Via Lactea">
+            </div>
+
+            <div class="menu-icon" id="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-list-item"><a href="#hero" class="nav-link">Inicio</a></li>
+                    <li class="nav-list-item"><a href="#publicidad" class="nav-link">Cine+</a></li>
+                    <li class="nav-list-item"><a href="#estrenos" class="nav-link">Estrenos</a></li>
+                    <li class="nav-list-item"><a href="#informacion" class="nav-link">Conocenos</a></li>
+                    <li class="nav-list-item"><a href="#" class="nav-link">Categorias</a></li>
+                </ul>
+                <section class="btn-list">
+                    <button class="btn" id="login-btn">Iniciar Sesión</button>
+                    <button class="btn" id="register-btn">Registrarse</button>
+                </section>
+            </nav>
+        </header>
+
+         <section class="hero" id="hero">
+            <video autoplay muted loop id="background-video">
+                <source src="./img/video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-content">
+                <h1>¡Vive la magia del cine en cada escena! 🎥✨</h1>
+                <p>Sumérgete en historias inolvidables, disfruta de los mejores estrenos y siente la emoción en la gran pantalla. </p>
+                <h2>¡Compra tus entradas ahora!</h2>
+            </div>
+         </section>
+
+        <section class="publicidad" id="publicidad">
+            <div class="publicidad-container">
+                <h2 class="publicidad-container-title">🎬 ¡Promociones Exclusivas para Ti! 🎟️</h2>
+                <p class="publicidad-container-text">Aprovecha descuentos increíbles y vive la mejor experiencia en la gran pantalla. ¡No te lo pierdas!</p>
+                <button class="btn publicidad-container-btn">Descubrir Ofertas</button>
+            </div>
+        </section>
+
+        <section class="estrenos" id="estrenos">
+            <h2>Películas en Estreno</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <div class="carousel-item-img">
+                        <img src="img/captainAmerica.jpg" alt="captainAmerica">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-item-img">
+                        <img src="img/Bridget-Jones-Loca-por-el.jpg" alt="Bridget-Jones-Loca-por-el">
+                    </div>
+                    
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-item-img">
+                        <img src="img/polican_peli_.jpg" alt="polican_peli">
+                    </div>
+                   
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-item-img">
+                        <img src="img/mikaela.jpg" alt="mikaela">
+                    </div>
+                    
+                </div>
+            </div>
+            <button class="carousel-prev" id="prev">❮</button>
+            <button class="carousel-next" id="next">❯</button>
+        </section>
+
+        <section class="informacion" id="informacion">
+            <h2>Conocenos</h2>
+            <div class="info-container">
+                <div class="info-item">
+                    <div class="info-img">
+                        <img src="img/popcorn-movie-party-entertainment.jpg" alt="popcorn-movie-party-entertainment">
+                    </div>
+                    <div class="info-text">
+                        <h3 class="infot-text-title">¿Quiénes somos?</h3>
+                        <p class="infot-text-p">En Cine Vía Láctea somos amantes del cine, comprometidos con ofrecerte una experiencia única en cada película.
+                             Nos esforzamos por brindarte los mejores estrenos y un ambiente cómodo para que disfrutes de cada historia como nunca antes.</p>
+                        <h3 class="infot-text-title">Nuestra misión</h3>
+                        <p class="infot-text-p">Queremos ser tu lugar de referencia para el cine, ofreciéndote un espacio donde cada película se convierte en una experiencia inolvidable.</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-img">
+                        <img src="img/cintaCine.jpg" alt="cintaCine">
+                    </div>
+                    <div class="info-text">
+                        <h3 class="infot-text-title">¡Conéctate con nosotros en las redes sociales!</h3>
+                        <p class="infot-text-p">En Cine Vía Láctea, nos encanta estar cerca de ti. Síguenos en nuestras redes sociales para estar al tanto de los últimos estrenos, promociones exclusivas y eventos especiales.</p>
+                        <h3 class="infot-text-title">Síguenos y sé parte de nuestra comunidad:</h3>
+                        <div class="subredes">
+                            <a href="https://www.instagram.com" target="_blank" class="iconos instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com" target="_blank" class="iconos linkedin">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://x.com" target="_blank" class="iconos twitter">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categorias">categorias</section>
+
+        <!--<footer class="footer">footer</footer> -->
+    </div>
 
 
 </body>

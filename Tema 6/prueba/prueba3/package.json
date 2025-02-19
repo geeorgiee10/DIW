@@ -1,0 +1,12 @@
+{
+  "name": "prueba3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass -w scss/styles.scss css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

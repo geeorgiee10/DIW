@@ -1,0 +1,48 @@
+header {
+    background-color: $header-bg;
+    padding: 0 1rem;
+    margin-top: 0;
+    text-align: center;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+
+    .header-container {
+        @include flex-center($direccion: column, $margin: 0);
+
+        .first-element{
+            @include tamaño();
+            @include flex-center($justifica:space-between, $gap: 3rem);
+
+            .logo {
+                @include tamaño($width: 5%);
+            }
+
+            .first-nav{
+                @include tamaño($width: 40%);
+                @include flex-center($justifica:flex-end);
+
+                &-list{
+                 @include flex-center($justifica: space-between, $gap: 3rem); 
+                 list-style: none;  
+                }
+
+                @include nav();
+            }        
+        }
+
+        .second-element{
+
+            .second-nav{
+                @include tamaño($width: 100%);
+                @include flex-center($justifica:center);
+
+                &-list{
+                    @include flex-center($justifica: space-between, $gap: 3rem); 
+                    list-style: none;  
+                }
+   
+                @include nav();
+            } 
+        }
+    }
+}

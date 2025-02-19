@@ -8,5 +8,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "sassdoc": "^2.7.4"
+  }
 }

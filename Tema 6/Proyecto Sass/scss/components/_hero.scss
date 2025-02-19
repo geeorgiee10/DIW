@@ -1,0 +1,35 @@
+@use "../mixin" as *;
+@use "../variables" as *;
+@use "../functions" as *;
+
+.hero {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    @include tamaño($width: 100%, $height: 100vh);
+    @include flex-center($margin: 0);
+    overflow: hidden;
+    position: relative;
+
+    #background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include tamaño();
+        object-fit: cover; 
+    }
+
+    .hero-content {
+        @include tamaño($width: 45%, $height:auto);
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        color: color(text);
+        padding: font-size(md);
+        background: rgba(color(secondary), 0.7);
+        border-radius: $border-radius;
+        @include media("medium"){
+            @include tamaño($width: 85%, $height:auto);
+            font-size: font-size(md);
+        }
+    }
+}

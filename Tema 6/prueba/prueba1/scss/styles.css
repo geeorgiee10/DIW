@@ -2,14 +2,12 @@
   background-color: #9B8989;
   padding-top: 0.2rem;
 }
-
 .container h1 {
   width: 99%;
   margin: 0 0.1rem;
   border-radius: 5px;
   background-color: #CBCBCB;
 }
-
 .container ul {
   display: flex;
   flex-direction: row;
@@ -18,7 +16,6 @@
   gap: 1rem;
   margin: 1rem 0;
 }
-
 .container ul li {
   list-style: none;
   margin: 0;
@@ -26,17 +23,14 @@
   font-weight: bold;
   color: #f2d3b6;
 }
-
 .container .parrafo {
   background-color: #dac6c6;
   width: 99%;
   margin: 0 0.1rem;
 }
-
 .container .parrafo h2 {
   color: #d1853e;
 }
-
 .container footer {
   background-color: #CBCBCB;
   display: flex;
@@ -46,7 +40,6 @@
   gap: 1rem;
   margin: 1rem 0;
 }
-
 .container footer span {
   color: white;
-}
+}/*# sourceMappingURL=styles.css.map */
