@@ -1,0 +1,27 @@
+@use "../mixin" as *;
+@use "../functions" as *;
+@use "../variables" as *;
+
+.opiniones{
+    grid-row: 7 / 8;
+    grid-column: 1 / -1;
+    background-color: color(secondary);
+    @include tamaño($height: auto);
+
+    .opiniones-container {
+        @include flex-center($direccion:column, $margin: 0, $gap: 2rem);
+        padding: font-size(4xl);
+
+        .opinion-card {
+            @include cardOpiniones();
+        }
+
+        .opinion-card:nth-child(even){
+            @include flex-center($direccion: row-reverse,$margin: 0, $justifica: right);
+
+            @include media("small"){
+                @include flex-center($margin: 0, $direccion: column);
+            }
+        }
+    } 
+}

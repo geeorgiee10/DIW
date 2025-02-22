@@ -2,9 +2,46 @@
 @use "../functions" as *;
 @use "../variables" as *;
 
-.categorias{
-    grid-row: 6 / 7;  
+.categorias {
+    grid-row: 6 / 7;
     grid-column: 1 / -1;
     background-color: color(header-background);
-    @include tamaño($height: 100vh);
+    @include tamaño($height: auto);
+    @include flex-center($margin: 0, $direccion: column, $justifica: flex-start);
+    padding: font-size(3xl);
+
+    .tabs {
+        @include flex-center();
+        border-bottom: 2px solid color(primary);
+
+        .tab {
+            @include tab();
+        }
+    }
+
+    .tab-content {
+        @include flex-center($display: none);
+        @include tamaño();
+        text-align: center;
+        font-size: font-size(xl);
+        color: color(text-highlight);
+    
+        &.active {
+            @include flex-center($display:flex);
+        }
+
+        .card {
+            @include card();
+        }
+    }
+
+
 }
+
+
+
+
+
+
+
+

@@ -201,22 +201,22 @@ header .header-container .second-element .second-nav-link:hover {
   color: black;
 }
 .social-section .social-card:nth-child(1) {
-  background-color: lightgray;
-}
-.social-section .social-card:nth-child(2) {
   background-color: lightgoldenrodyellow;
 }
-.social-section .social-card:nth-child(3) {
+.social-section .social-card:nth-child(2) {
   background-color: pink;
 }
-.social-section .social-card:nth-child(4) {
-  background-color: lightcoral;
-}
-.social-section .social-card:nth-child(5) {
+.social-section .social-card:nth-child(3) {
   background-color: lightblue;
 }
-.social-section .social-card:nth-child(6) {
+.social-section .social-card:nth-child(4) {
   background-color: lightgreen;
+}
+.social-section .social-card:nth-child(5) {
+  background-color: lightgray;
+}
+.social-section .social-card:nth-child(6) {
+  background-color: lightcoral;
 }
 
 footer {

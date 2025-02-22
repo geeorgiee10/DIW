@@ -1,4 +1,53 @@
-.footer{
-    grid-row: 4 / 5;
+@use "../mixin" as *;
+@use "../functions" as *;
+@use "../variables" as *;
+
+
+.footer {
+    grid-row: 8 / 9;
     grid-column: 1 / -1;
+    background-color: color(primary);
+    @include tamaño($height: auto);
+    padding: font-size(md);
+    @include flex-center($direccion:column, $justifica: space-between, $margin: 0);
+    text-align: center;
+    color: color(text);
+
+    .footer-content {
+        margin-bottom: font-size(xs);
+
+        .footer-links {
+            @include flex-center($margin: 0);
+
+            @include media("small"){
+                @include flex-center($direccion: column, $margin: 0);
+            }
+
+            .footer-link {
+                color: color(text);
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: color(text-highlight);
+                }
+            }
+        } 
+    }
+
+    .footer-social {
+        @include flex-center($margin: 0);
+
+        &-icon {
+            color: color(text);
+            font-size: font-size(5xl);
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: color(text-highlight);
+                transform: scale(1.3);
+            }
+        } 
+    }
 }

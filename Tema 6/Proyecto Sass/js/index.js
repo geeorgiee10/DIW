@@ -7,7 +7,6 @@ window.onload = () => {
         navLinks.classList.toggle('active');
     });
 
-    //document.addEventListener("DOMContentLoaded", function() {
         const prevButton = document.getElementById("prev");
         const nextButton = document.getElementById("next");
         const carousel = document.querySelector(".carousel");
@@ -32,7 +31,16 @@ window.onload = () => {
             currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
             updateCarousel();
         });
-    //});
-    
+
+        
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(tabContent => tabContent.classList.remove('active'));
+        
+                this.classList.add('active');
+                document.getElementById(this.dataset.target).classList.add('active');
+            });
+        });
 
 };

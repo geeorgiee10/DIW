@@ -41,10 +41,8 @@
         }
       }
     }
-  }
+}
   
-  
-
 @mixin nav() {
     @include tamaño($height:auto);
     @include flex-center($justifica: space-between, $gap: 1.2rem);
@@ -72,7 +70,7 @@
           .nav-link {
               text-decoration: none;
               font-family: $font-family-secondary;
-              font-size: font-size(2xl);
+              font-size: font-size(xl);
               font-weight: bold;
               color: color(text);
               transition: all 0.3s;
@@ -113,7 +111,6 @@
 
 }
 
-
 @mixin media($clave){
     $size: map-get($map: $sizes, $key: $clave);
     @media only screen and (max-width: $size) {
@@ -129,3 +126,122 @@
     text-shadow: $sombraX $sombraY $transparencia $color;
 }
   
+@mixin tab(){
+    @include tamaño($width: 10rem);
+    color: color(text-highlight);
+    padding: font-size(xs) font-size(sm);
+    font-size: font-size(md);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: $border-radius;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease-in-out;
+        
+    @include media("medium"){
+        @include tamaño($width: 8rem);
+    }
+
+    &.active {
+        @include tamaño($width: 10rem, $height: 80%);
+        color: color(primary);
+
+        @include media("medium"){
+            @include tamaño($width: 6rem, $height: 80%);
+        }
+    }
+        
+    &:hover {
+        color: color(tertiary);
+    }
+}
+
+@mixin card(){
+    @include tamaño($width: 20%, $height: 90%);
+    @include flex-center($direccion: column);
+    background-color: color(text);
+    border-radius: $border-radius;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+
+    @include media("medium"){
+        @include tamaño($width: 70%, $height: 90%);
+    }
+        
+    &:hover {
+        transform: scale(1.05);
+    }
+        
+    &-img {
+        @include tamaño($height: 85%);
+        & img {
+            @include tamaño();
+            object-fit: cover;       
+        }
+    }
+        
+    &-content {
+        padding: font-size(md);
+        text-align: center;
+        
+        &-title {
+            font-size: font-size(xl);
+            font-weight: bold;
+            color: color(primary);
+            margin-bottom: font-size(xs);
+        }
+    }
+}
+
+@mixin cardOpiniones(){
+    @include tamaño($width: 70%);
+    @include flex-center($margin: 0, $justifica: left);
+    background-color: color(text);
+    border-radius: $border-radius2;
+    @include sombra($sombraX: 0px, $sombraY: 4px, $transparencia: 8px, $color:rgba(0, 0, 0, 0.3));
+    padding: font-size(2xl);
+    transition: all 0.5s ease;
+    
+    @include media("small"){
+        @include flex-center($margin: 0, $direccion: column);
+    }
+
+    &:hover{
+        transform: scale(1.05);
+    }
+
+    &-img {
+        @include tamaño($width: 10rem, $height: 10rem); 
+        @include limitTamaño();
+        overflow: hidden;
+        @include media("small"){
+            @include tamaño($width: 5rem, $height: 5rem); 
+            @include limitTamaño($minHeight: 10rem, $maxHeight: 10rem, $minWidth: 10rem, $maxWidth: 10rem)
+        }
+        & img{
+            @include tamaño();
+            object-fit: cover;
+                    border-radius: $border-redondo;
+        }
+    }
+
+    &-content{
+        & h3 {
+            font-size: font-size(2xl);
+            color: color(primary);
+        }
+                
+        & p {
+            font-size: font-size(md);
+            color: color(secondary);
+        }
+    }
+}
+
+@mixin limitTamaño($minHeight: 15rem, $maxHeight: 15rem, $minWidth: 15rem, $maxWidth: 15rem){
+    min-height: $minHeight;
+    max-height: $maxHeight;
+    min-width: $minWidth;
+    max-width: $maxWidth;
+}
