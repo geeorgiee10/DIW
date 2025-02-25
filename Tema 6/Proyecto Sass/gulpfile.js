@@ -1,51 +1,36 @@
+const { src, dest } = require('gulp');
+const rename = require('gulp-rename'); // npm install gulp-rename
+const cleanCSS = require('gulp-clean-css'); 
+const sass = require('gulp-dart-sass'); // npm i gulp-dart-sass
+const processhtml = require('gulp-useref'); 
 
-const {serie, paralelo, src, dest, swtch } = require ('gulp');
+function procesarCSS() {
+    return src('scss/style.scss') // Origen del archivo SCSS
+        .pipe(sass()) // Compilar SASS a CSS
+        .pipe(cleanCSS()) // Minimizar CSS
+        .pipe(rename({ suffix: '.min', extname: '.css' })) // Renombrar archivo
+        .pipe(dest('dist/assets/css')); // Guardar en la carpeta destino
+};
 
-//require('gulp');
-/*
-
-function holamundo(cb){
-    console.log('Hola Mundo');
-    cb();
-}
-
-function adios(cb){
-    console.log('Adios Mundo');
-    cb();
-}
-
-exports.holamundo = holamundo;  //nombre de la tarea fuera, y nonombre de la tarea dentro
-exports.adios = adios; 
-exports.default = holamundo;  //nombre de la tarea fuera, y nonombre de la tarea dentro
-exports.serie = adios,holamundo;
-exports.paralelo = holamundo, adios;
-
-*/
-
-const rename=require('gulp-rename'); // npm install gulp-rename
-//const pleeease=require('gulp-pleeease'); //Obsoleto
-const mincss=require('cssmin');  // npm i cssmin
-const sass = require('gulp-dart-scss'); // npm i gulp-dart-sass
-const sassDoc = require('sassdoc'); // npm i gulp-sass ??
-
-//processhtml para procesas los comentarios
-
-function minimiza_y_renombrar(){
-    return src('./subir/css/style.css')
-        .pipe(pleeease())
-        .pipe(rename({suffix:".min", sxtname:".css"
-    }))
-        .pipe(dest('./subir/css'));
-}
-
-function compilar(){
-    return src('scss/style.scss')
-    .pipe(sass())
-    .pipe(dest('./subir/css'));
-}
-
-function html(){
+function procesaHTML(){
     return src('*.html')
-    .pipe(processhtml())
-    .pipe(dest('./subir/'));
+        .pipe(processhtml())
+        .pipe(dest('./dist/'));
+};
+
+function procesarImagenes(){
+    return src('./img/*')
+        .pipe(dest('./dist/img'));
 }
+
+function procesarJS() {
+    return src('./js/*.js')
+        .pipe(dest('./dist/assets/js'));
+}
+
+exports.procesarCSS = procesarCSS;
+exports.procesaHTML = procesaHTML;
+exports.procesarImagenes = procesarImagenes;
+exports.procesarJS = procesarJS;
+exports.default = procesarCSS;
+

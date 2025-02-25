@@ -1,11 +1,35 @@
 @use "variables" as *;
 
+
+/// Para obtener los colores que hay en el mapa $colors
+/// @group colors
+/// @param {String} $name - Nombre del color en el mapa $colors
+/// @return {Color} - El valor del color solicitado
+/// @example scss
+///   .button {
+///     background-color: color(primary);
+///     color: color(text);
+///   }
+/// @throws Error si el color solicitado no existe en el mapa $colors
 @function color($name) {
     @if map-has-key($colors, $name) {
         @return map-get($colors, $name);
     }
 }
 
+/// Para obtener los tamaños que hay en el mapa de $font-sizes
+/// @group typography
+/// @param {String} $name - Nombre del tamaño de fuente en el mapa $font-sizes (ej: xs, sm, md, lg, xl)
+/// @return {Length} - El valor del tamaño de fuente solicitado
+/// @example scss
+///   .title {
+///     font-size: font-size(xl);
+///   }
+///   .text {
+///     font-size: font-size(md);
+///     margin-bottom: font-size(sm);
+///   }
+/// @throws Error si el tamaño solicitado no existe en el mapa $font-sizes
 @function font-size($name) {
     @if map-has-key($font-sizes, $name) {
         @return map-get($font-sizes, $name);

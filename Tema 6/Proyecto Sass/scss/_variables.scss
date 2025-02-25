@@ -1,18 +1,56 @@
-
+/// Mapa de colores
+/// @group colors
+/// @type Map
+/// @prop {Color} primary [#2A1E5C] - Morado nocturno
+/// @prop {Color} secondary [#443C96] - Azul violeta
+/// @prop {Color} tertiary [#6D67A3] - Lavanda oscuro
+/// @prop {Color} text-highlight [#A36BAE] - Rosa empolvado
+/// @prop {Color} button [#D69FA2] - Melocotón suave
+/// @prop {Color} border [#AD6C51] - Cobre apagado
+/// @prop {Color} text [#FFFFFF] - Color de texto principal
+/// @prop {Color} header-background [#2A1E5C] - Fondo del encabezado
+/// @example scss
+///   .element {
+///     background-color: map-get($colors, primary);
+///     color: map-get($colors, text);
+///   }
 $colors: (
-    primary: #2A1E5C,     // Fondo principal - Morado nocturno  
-    secondary: #443C96,     // Acentos principales - Azul violeta  
-    tertiary: #6D67A3,      // Detalles y bordes - Lavanda oscuro  
-    text-highlight: #A36BAE, // Texto destacado - Rosa empolvado  
-    button: #D69FA2,        // Botones y llamadas a la acción - Melocotón suave  
-    border: #AD6C51,        // Bordes y detalles sutiles - Cobre apagado  
+    primary: #2A1E5C,     
+    secondary: #443C96,     
+    tertiary: #6D67A3,        
+    text-highlight: #A36BAE,  
+    button: #D69FA2,          
+    border: #AD6C51,         
     text: #FFFFFF,
     header-background: #2A1E5C 
 );
 
+/// Fuente principal para el contenido general
+/// @group typography
+/// @type String
 $font-family-primary: 'Poppins', sans-serif;
+
+/// Fuente secundaria para encabezados y elementos destacados
+/// @group typography
+/// @type String
 $font-family-secondary: 'Roboto', sans-serif;
 
+/// Mapa de tamaños
+/// @group typography
+/// @type Map
+/// @prop {Length} xs [0.75rem] - Extra pequeño
+/// @prop {Length} sm [0.875rem] - Pequeño
+/// @prop {Length} md [1rem] - Medio 
+/// @prop {Length} lg [1.125rem] - Grande
+/// @prop {Length} xl [1.25rem] - Extra grande
+/// @prop {Length} 2xl [1.5rem] - Doble extra grande
+/// @prop {Length} 3xl [1.875rem] - Triple extra grande
+/// @prop {Length} 4xl [2.25rem] - Cuádruple extra grande
+/// @prop {Length} 5xl [3rem] - Quíntuple extra grande
+/// @example scss
+///   .title {
+///     font-size: map-get($font-sizes, 2xl);
+///   }
 $font-sizes: (
     xs: 0.75rem,  
     sm: 0.875rem, 
@@ -25,11 +63,37 @@ $font-sizes: (
     5xl: 3rem, 
 );
 
+
+/// Radio de borde principal para elementos
+/// @group layout
+/// @type Length
 $border-radius: 20px;
+
+/// Radio de borde secundario para elementos más pequeños
+/// @group layout
+/// @type Length
 $border-radius2: 10px;
+
+/// Radio de borde para elementos circulares
+/// @group layout
+/// @type Percentage
 $border-redondo: 50%;
 
-
+/// Mapa con los puntos de ruptura para media queries
+/// @group responsive
+/// @type Map
+/// @prop {Length} very-small [480px]
+/// @prop {Length} small [768px]
+/// @prop {Length} medium [1024px]
+/// @prop {Length} large [1280px]
+/// @prop {Length} very-large [1355px]
+/// @prop {Length} extra-large [1440px]
+/// @example scss
+///   @media (max-width: map-get($sizes, medium)) {
+///     .element {
+///       width: 100%;
+///     }
+///   }
 $sizes: (
   "very-small": 480px,
   "small": 768px,
